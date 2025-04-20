@@ -1,0 +1,296 @@
+* {
+    font-size: 100%;
+}
+
+/* Toggle Switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+    background: #ffffff;
+}
+
+body.light .container {
+    background: #fafcff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light ul li:hover {
+    background: #e0e0e0;
+}
+
+body.light pre {
+    background: #f5f5f5;
+    color: black;
+}
+
+body.dark {
+    background: #2f3134;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark ul li:hover {
+    background: #333;
+}
+
+body.dark pre {
+    background: #000;
+    color: greenyellow;
+}
+
+body.light ul li,
+body.light a,
+body.light p,
+body.light h3 {
+    color: black !important;
+}
+
+body.dark ul li,
+body.dark a,
+body.dark p,
+body.dark h3 {
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    text-align: center;
+    font-size: 150%;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    height: 8.5px;
+}
+
+pre {
+    display: block;
+    /* Äáº£m báº£o nÃ³ khÃ´ng bá»‹ áº©n */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+body.light a {
+    display: inline-block;
+    font-size: 100%;
+    color: white;
+    border-radius: 3px;
+    transition: color 0.3s ease;
+    height: 15px;
+}
+
+body.dark a {
+    display: inline-block;
+    font-size: 100%;
+    color: white;
+    border-radius: 3px;
+    transition: color 0.3s ease;
+    height: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 1px;
+    /* Giáº£m khoáº£ng cÃ¡ch giá»¯a cÃ¡c Ä‘oáº¡n */
+    line-height: 1;
+    /* Äiá»u chá»‰nh chiá»u cao dÃ²ng */
+    font-size: 80%;
+}
+
+body.dark .toggle-btn {
+    background-color: #0074D9;
+    cursor: pointer;
+    font-size: 90%;
+    float: right;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+body.light .toggle-btn {
+    background-color: greenyellow;
+    cursor: pointer;
+    font-size: 90%;
+    float: right;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.collapsible {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.collapsible.open {
+    max-height: 2000px;
+    /* Hoáº·c má»™t giÃ¡ trá»‹ lá»›n hÆ¡n */
+    opacity: 1;
+}
+
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e6f9fc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.theme-switch:hover {
+    background: #d0f4f9;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    .theme-switch {
+        top: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .toggle-btn {
+        font-size: 16px;
+    }
+}
+
+body.dark button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body.dark button:hover {
+    background-color: #0056b3;
+}
+
+body.light button {
+    background-color: greenyellow;
+    color: white;
+    border: none;
+    font-size: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body.light button:hover {
+    background-color: #0056b3;
+}
+
+body.light label {
+    color: black;
+}
+
+body.dark label {
+    color: white;
+}
+
+.parent-container {
+    text-align: right;
+    margin-top: -20px;
+    /* Äiá»u chá»‰nh giÃ¡ trá»‹ nÃ y Ä‘á»ƒ di chuyá»ƒn lÃªn */
+}

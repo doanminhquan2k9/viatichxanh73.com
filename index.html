@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Sử Dụng Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="light">
+    <div style="border: 2px solid #00cfe8;" class="container">
+        <a href="https://haidang-coder.neocities.org/" style="margin-right: 20px; display: inline-flex; align-items: center; gap: 5px; color: black;">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="https://zalo.me/g/dqqxyf926" style="display: inline-flex; align-items: center; gap: 5px; color: black;">
+            <i class="fa-solid fa-bell"></i>
+            <span>Box Chat - Thông Báo</span>
+        </a>
+
+        <!-- Nút icon -->
+        <div class="parent-container">
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <h1 style="color: red;">Hướng Dẫn Sử Dụng Tool</h1>
+        <p id="datetime" style="font-size: 16px; font-weight: bold; text-align: center;"></p>
+
+        <!-- Yêu cầu hệ thống -->
+        <h3>📌 Yêu cầu hệ thống
+            <span class="toggle-btn" onclick="toggleMenu('req')">Xem Thêm ⏷</span>
+        </h3>
+        <ul id="req" class="collapsible">
+            <pre>✔️ >= Python 3.12 (Windows)</pre>
+            <pre>✔️ >= Android 10 64bit (Termux)</pre>
+            <pre>✔️ >= Áp Dụng Cho Mọi Thiết Bị (Cloud Shell)</pre>
+        </ul>
+
+        <!-- Đường dẫn tải -->
+        <h3>📥 Ứng Dụng Và Tiện Ích
+            <span class="toggle-btn" onclick="toggleMenu('download')">Xem Thêm ⏷</span>
+        </h3>
+        <ul id="download" class="collapsible">
+            <pre>📱 Termux <a href="https://apkpure.com/vn/termux/com.termux/downloading">Tải xuống</a></pre>
+            <pre>🧩 Get Cookie <a href="https://plus24h.com/download/getcookie.zip">Tải xuống</a></pre>
+        </ul>
+
+        <!-- Menu Tool -->
+        <h3>🛠️ Menu Tools
+            <span class="toggle-btn" onclick="toggleMenu('tools')">Xem Thêm ⏷</span>
+        </h3>
+        <div id="tools" class="collapsible">
+            <pre>➕ Tool Follow Pro5 (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/follow_pro5.py" class="download-link" download="follow_pro5.py">Tải Xuống</a></pre>
+            <pre>⚙️ Tool Kích Hoạt Pro5 (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/kich_hoat_pro5.py" class="download-link" download="kich_hoat_pro5.py">Tải Xuống</a></pre>
+            <pre>🤝 Tool Kết Bạn Gợi Ý (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/ket_ban.py" class="download-link" download="ket_ban.py">Tải Xuống</a></pre>
+            <pre>👀 Tool View Stories (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/view_pro5.py" class="download-link" download="view_pro5.py">Tải Xuống</a></pre>
+            <pre>💔 Tool Hủy Follow Hàng Loạt (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/unfollow.py" class="download-link" download="view_pro5.py">Tải Xuống</a></pre>
+            <pre>🏃💨 Tool Thoát Group Hàng Loạt (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/ungroup.py" class="download-link" download="ungroup.py">Tải Xuống</a></pre>
+            <pre>🚀 Tool Buff Tiktok (Live) <a href="https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/tiktok.py" class="download-link" download="tiktok.py">Tải Xuống</a></pre>
+        </div>
+
+
+        <!-- Termux -->
+        <h3>🔧 Hướng Dẫn Setup Tool Termux
+            <span class="toggle-btn" onclick="toggleMenu('termux')">Xem Thêm ⏷</span>
+        </h3>
+        <div id="termux" class="collapsible">
+            <h3>Bước 1: Cấp quyền cho app và chạy lệnh:</h3>
+            <pre>pkg update<br>pkg install python<br>pkg install git<br>termux-setup-storage<br>pip install requests<br>pip install pystyle<br>pip install bs4</pre>
+            <h3>Bước 2: Chạy Tool:</h3>
+            <pre>cd /sdcard/download && python tên_file.py</pre>
+        </div>
+
+        <!-- Windows -->
+        <h3>🔧 Hướng Dẫn Cài Đặt Tool Trên Windows
+            <span class="toggle-btn" onclick="toggleMenu('windows')">Xem Thêm ⏷</span>
+        </h3>
+        <div id="windows" class="collapsible">
+            <h3>Bước 1: Tải Python</h3>
+            <pre>Truy cập trang web chính thức của Python để tải phiên bản mới nhất:
+<a href="https://www.python.org/downloads/release/python-3126/" target="_blank">Tải Python 3.12</a>
+Sau khi tải về, mở file cài đặt để tiến hành cài đặt.</pre>
+
+            <h3>Bước 2: Cài đặt Python và kiểm tra</h3>
+            <p>1. Mở file cài đặt Python đã tải về.</p>
+            <p>2. **Lưu ý quan trọng:** Tích chọn <strong>"Add Python to PATH"</strong> để tránh lỗi về sau.</p>
+            <p>3. Nhấn <strong>Install Now</strong> và chờ quá trình cài đặt hoàn tất.</p>
+            <p>4. Sau khi cài đặt xong, mở <strong>Command Prompt (cmd)</strong> và kiểm tra bằng lệnh sau:</p>
+            <pre>python --version<br>pip --version</pre>
+            <p>Nếu hiển thị phiên bản Python và Pip, nghĩa là bạn đã cài đặt thành công.</p>
+
+            <h3>Bước 3: Cài đặt thư viện cần thiết</h3>
+            <p>Mở <strong>Command Prompt (cmd)</strong> và nhập lệnh sau để cài đặt các thư viện cần thiết:</p>
+            <pre>pip install requests pystyle bs4</pre>
+            <p>Hệ thống sẽ tự động tải và cài đặt các thư viện này. Chờ quá trình hoàn tất.</p>
+
+            <h3>Bước 4: Chạy Tool</h3>
+            <p>Di chuyển đến thư mục chứa file tool (ví dụ: <code>haidang.py</code>) bằng lệnh:</p>
+            <pre>cd đường_dẫn_đến_folder</pre>
+            <p>Tiếp theo, chạy tool bằng lệnh:</p>
+            <pre>python tên_file.py</pre>
+            <p>Nếu gặp lỗi, thử kiểm tra lại các bước hoặc cập nhật pip bằng lệnh:</p>
+            <pre>python -m pip install --upgrade Pip</pre>
+            <p>Chúc bạn cài đặt thành công! 🚀</p>
+        </div>
+
+
+        <!-- Cloud Shell -->
+        <h3>🔧 Hướng Dẫn Setup Tool Trên Cloud Shell
+            <span class="toggle-btn" onclick="toggleMenu('cloud')">Xem Thêm ⏷</span>
+        </h3>
+        <div id="cloud" class="collapsible">
+            <h3>Bước 1: Mở Google Cloud Shell</h3>
+            <p><a href="https://shell.cloud.google.com/?show=ide%2Cterminal" target="_blank">Truy cập trang <b>Google Cloud Console</b></a></p>
+            <pre>Nhấp vào biểu tượng Terminal (hình dấu nhắc lệnh) ở góc trên bên phải để mở Cloud Shell.</pre>
+            <h3>Bước 2: Cài đặt thư viện cần thiết</h3>
+            <pre>pip install requests pystyle bs4</pre>
+            <h3>Bước 3: Chạy Tool</h3>
+            <form>
+                <label for="selectBox">Chọn tool cần tải:</label>
+                <select id="selectBox" style="padding: 10px; width: 100%; font-size: 100%; border-radius: 5px; border: 1px solid #ccc;">
+                    <option value="">-- Chọn một tool --</option>
+                </select>
+            </form>
+
+            <script>
+                let tools1 = [{
+                        name: "➕ Tool Follow Pro5 (Live)",
+                        value: "follow_pro5.py"
+                    },
+                    {
+                        name: "⚙️ Tool Kích Hoạt Pro5 (Live)",
+                        value: "kich_hoat_pro5.py"
+                    },
+                    {
+                        name: "🤝 Tool Kết Bạn Gợi Ý (Live)",
+                        value: "ket_ban.py"
+                    },
+                    {
+                        name: "👀 Tool View Stories (Live)",
+                        value: "view_pro5.py"
+                    },
+                    {
+                        name: "💔 Tool Hủy Follow Hàng Loạt (Live)",
+                        value: "unfollow.py"
+                    },
+                    {
+                        name: "🏃💨 Tool Thoát Group Hàng Loạt (Live)",
+                        value: "ungroup.py"
+                    },
+                    {
+                        name: "🚀 Tool Buff Tiktok (Live)",
+                        value: "tiktok.py"
+                    }
+                ];
+
+                // Hàm sắp xếp tool theo thứ tự A-Z, ưu tiên "(Live)" lên đầu
+                tools1.sort((a, b) => {
+                    let isLiveA = a.name.includes("(Live)") ? -1 : 1;
+                    let isLiveB = b.name.includes("(Live)") ? -1 : 1;
+
+                    if (isLiveA !== isLiveB) return isLiveA - isLiveB;
+                    return a.name.localeCompare(b.name, 'vi', {
+                        sensitivity: 'base'
+                    });
+                });
+
+                let selectBox = document.getElementById("selectBox");
+
+                tools1.forEach(tool => {
+                    let option = document.createElement("option");
+                    option.value = tool.value;
+                    option.textContent = tool.name;
+                    selectBox.appendChild(option);
+                });
+            </script>
+
+            <br>
+            <button type="button" onclick="displaySelection()">🚀 Submit</button>
+            <h3>📌 Lệnh cài đặt:</h3>
+            <pre id="output">Chưa có lệnh ...</pre>
+            <script>
+                function displaySelection() {
+                    var selectedValue = document.getElementById("selectBox").value;
+                    if (selectedValue) {
+                        document.getElementById("output").textContent =
+                            `sudo apt install git wget -y && wget https://raw.githubusercontent.com/dangvirpprokaka/tools/refs/heads/main/${selectedValue} && pip install bs4 requests && python ${selectedValue}`;
+                    } else {
+                        document.getElementById("output").textContent = "⚠️ Vui lòng chọn một tool trước khi tải!";
+                    }
+                }
+            </script>
+        </div>
+        <style>
+            .rainbow-text {
+                font-weight: bold;
+                font-size: 90%;
+                background-image: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, purple);
+                background-size: 400% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: rainbow-animation 3s linear infinite;
+            }
+
+            @keyframes rainbow-animation {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+
+        <p class="rainbow-text" style="text-align: center;">
+            Copyright <a href="https://www.facebook.com/letronghaidang.limited" style="color: inherit;" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile of Lê Trọng Hải Đăng">
+                <u>Lê Trọng Hải Đăng</u>
+            </a>
+        </p>
+
+    </div>
+    <script src="downloadFile.js"></script>
+    <script src="toggle.js"></script>
+    <script src="time.js"></script>
+</body>
+
+</html>
